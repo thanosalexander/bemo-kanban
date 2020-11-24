@@ -1,0 +1,89 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$box-radius : 3.2px;
+
+
+html,body,#app,.container-fluid,.columns{
+    height: 100%;
+}
+
+.columns{
+    overflow-x: auto;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+
+    .column:not(:last-child){
+        margin-right: 15px;
+    }
+}
+
+
+.column{
+    border-radius: $box-radius;
+    background-color: white;
+    width: 300px;
+
+    .column-header{
+        h1,h2,h3,h4,h5{
+            margin-bottom: 0;
+        }
+        padding: 10px;
+    }
+
+
+    .column-body{
+        padding: 10px;
+
+        .card-mini{
+
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: $box-radius;
+            margin-bottom: 10px;
+
+            .card-mini__header{
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                font-weight: bold;
+                height: 40px;
+
+                h5{
+                    margin-bottom: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.card-form{
+
+    .card-form__header{
+        h1,h2,h3,h4,h5{
+            margin-bottom: 0;
+        }
+        padding: 15px;
+    }
+
+    .card-form__body{
+        padding: 15px;
+    }
+}
+
+
+#export-button{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
